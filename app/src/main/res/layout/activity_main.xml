@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorShadeOfBlack"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edit_text_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/img_btn_settings"
+                android:layout_toRightOf="@id/img_btn_back"
+                android:background="@color/colorShadeOfBlack"
+                android:hint="Search...."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:searchIcon="@drawable/ic_arrow_back_white_24dp"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/img_btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_arrow_back_white_24dp" />
+
+
+            <ImageButton
+                android:id="@+id/img_btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_more_vert_white_24dp" />
+
+
+        </RelativeLayout>
+
+        <android.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorShadeOfBlack"
+            android:theme="@style/AppTheme">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/img_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_more_vert_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/img_search"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_settings"
+                    android:background="@drawable/ic_search_white_24dp" />
+            </RelativeLayout>
+        </android.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMovieParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="0dp"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+</layout>

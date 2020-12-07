@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_movie"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:rating="4" />
+
+        <TextView
+            android:id="@+id/txt_raiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_name"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ratingBar"
+            android:textColor="@color/colorShadeOfBlack"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_movie"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorShadeOfBlack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/ratingBar">
+
+        </View>
+
+
+    </RelativeLayout>
+</layout>
